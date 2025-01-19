@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Will One UI 7 Be Released? - The Linux Wiz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <style>
+        .theme-transition {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .theme-light {
+            --bg-primary: #f9fafb;
+            --bg-header: #581c87;
+            --bg-card: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+        }
+        
+        .theme-dark {
+            --bg-primary: #111827;
+            --bg-header: #1f2937;
+            --bg-card: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+        }
+        
+        .theme-amoled {
+            --bg-primary: #000000;
+            --bg-header: #000000;
+            --bg-card: #000000;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .header {
+            background-color: var(--bg-header);
+        }
+
+        .card {
+            background-color: var(--bg-card);
+        }
+
+        .article-content {
+            line-height: 1.8;
+        }
+
+        .theme-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: var(--bg-card);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 0.5rem;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            z-index: 50;
+        }
+
+        .theme-menu.active {
+            display: block;
+        }
+
+        .release-date {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .release-date:hover {
+            transform: scale(1.02);
+        }
+
+        .share-button:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body class="theme-light theme-transition">
+    <!-- Header -->
+    <header class="header sticky top-0 z-50 theme-transition">
+        <div class="max-w-4xl mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2 text-white hover:text-purple-200 transition-colors">
+                    <i data-feather="terminal"></i>
+                    <h1 class="text-2xl font-bold">The Linux Wiz</h1>
+                </a>
+
+                <!-- Theme Switcher -->
+                <div class="relative">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-white hover:bg-opacity-20 text-white">
+                        <i data-feather="settings"></i>
+                    </button>
+                    <div id="theme-menu" class="theme-menu">
+                        <button onclick="setTheme('light')" class="w-full px-4 py-2 text-left hover:bg-purple-500 hover:bg-opacity-20 flex items-center">
+                            <i data-feather="sun" class="w-4 h-4 mr-2"></i>
+                            Light Mode
+                        </button>
+                        <button onclick="setTheme('dark')" class="w-full px-4 py-2 text-left hover:bg-purple-500 hover:bg-opacity-20 flex items-center">
+                            <i data-feather="moon" class="w-4 h-4 mr-2"></i>
+                            Dark Mode
+                        </button>
+                        <button onclick="setTheme('amoled')" class="w-full px-4 py-2 text-left hover:bg-purple-500 hover:bg-opacity-20 flex items-center">
+                            <i data-feather="moon" class="w-4 h-4 mr-2"></i>
+                            AMOLED Black
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <article class="card rounded-lg shadow-lg overflow-hidden">
+            <img src="/api/placeholder/1200/400" alt="One UI 7 Banner" class="w-full h-64 object-cover">
+            
+            <div class="p-8">
+                <!-- Article Header -->
+                <div class="mb-8">
+                    <span class="text-purple-600 text-sm font-semibold">ANDROID</span>
+                    <h1 class="text-3xl font-bold mt-2">When Will One UI 7 Be Released?</h1>
+                    <div class="flex items-center mt-4 text-sm card-text">
+                        <span class="flex items-center">
+                            <i data-feather="calendar" class="w-4 h-4 mr-1"></i>
+                            January 19, 2025
+                        </span>
+                        <span class="mx-2">•</span>
+                        <span class="flex items-center">
+                            <i data-feather="clock" class="w-4 h-4 mr-1"></i>
+                            2 min read
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Article Content -->
+                <div class="article-content space-y-6">
+                    <p>Welcome to the Linux Wiz! This is my very first blog post, and I'm excited to get things started. Today, we're tackling a question that's been on the minds of many: <em>When will the stable One UI 7 update be released?</em></p>
+
+                    <p>I could write a lengthy post and go on for paragraphs, but I'll keep it simple and get straight to the point. Ready? Here it is…</p>
+
+                    <div class="release-date text-white p-8 rounded-lg text-center my-12">
+                        <h2 class="text-4xl font-bold">January 22, 2025</h2>
+                        <div class="mt-2 text-purple-200">Mark your calendars!</div>
+                    </div>
+
+                    <p>Yes, that's the date! The wait is nearly over, and it's almost time to experience One UI 7 in all its glory. Thank you for sticking with me, and get ready for what's coming.</p>
+
+                    <p class="font-semibold">Stay tuned, it's going to be worth it!</p>
+                </div>
+
+                <!-- Share Section -->
+                <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-semibold mb-4">Share this article</h3>
+                    <div class="flex space-x-4">
+                        <button onclick="share('twitter')" class="share-button flex items-center space-x-2 text-[#1DA1F2] hover:opacity-80">
+                            <i data-feather="twitter"></i>
+                            <span>Twitter</span>
+                        </button>
+                        <button onclick="share('linkedin')" class="share-button flex items-center space-x-2 text-[#0A66C2] hover:opacity-80">
+                            <i data-feather="linkedin"></i>
+                            <span>LinkedIn</span>
+                        </button>
+                        <button onclick="share('copy')" class="share-button flex items-center space-x-2 text-gray-600 hover:opacity-80">
+                            <i data-feather="link"></i>
+                            <span>Copy Link</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Theme Switching
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeMenu = document.getElementById('theme-menu');
+        
+        themeToggle.addEventListener('click', () => {
+            themeMenu.classList.toggle('active');
+        });
+
+        function setTheme(theme) {
+            document.body.className = `theme-${theme} theme-transition`;
+            themeMenu.classList.remove('active');
+            localStorage.setItem('theme', theme);
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        // Share functionality
+        function share(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('When Will One UI 7 Be Released? - The Linux Wiz');
+            
+            switch(platform) {
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`);
+                    break;
+                case 'linkedin':
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
+                    break;
+                case 'copy':
+                    navigator.clipboard.writeText(window.location.href)
+                        .then(() => alert('Link copied to clipboard!'));
+                    break;
+            }
+        }
+
+        // Close theme menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!themeToggle.contains(e.target) && !themeMenu.contains(e.target)) {
+                themeMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
